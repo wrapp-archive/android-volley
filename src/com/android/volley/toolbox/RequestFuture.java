@@ -149,5 +149,9 @@ public class RequestFuture<T> implements Future<T>, Response.Listener<T>,
         mException = error;
         notifyAll();
     }
+
+  public VolleyError getError() {
+    return mException;
+  }
 }
 
